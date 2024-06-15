@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY DE1SOC_picosoc
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:28:14  MAYO 05, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -57,7 +57,7 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench_picosoc_AIPDDS -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench_DE1SOC_picosoc -section_id eda_simulation
 set_global_assignment -name VERILOG_INPUT_VERSION VERILOG_2001
 set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
 
@@ -69,10 +69,6 @@ set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
 
 
 
-set_global_assignment -name EDA_TEST_BENCH_NAME testbench_picosoc_AIPDDS -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_picosoc_AIPDDS
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_picosoc_AIPDDS -section_id testbench_picosoc_AIPDDS
-set_global_assignment -name EDA_TEST_BENCH_FILE ../picosoc/testbench_picosoc_AIPDDS.v -section_id testbench_picosoc_AIPDDS
 set_global_assignment -name BOARD "DE1-SoC Board"
 
 
@@ -83,18 +79,6 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 
 
 
-set_global_assignment -name VERILOG_FILE ../mods/basicblocks/ipm/ipm.v
-set_global_assignment -name VERILOG_FILE ../mods/basicblocks/ipm/ipm_register.v
-set_global_assignment -name VERILOG_FILE ../picosoc/ID0000200F_aip.v
-set_global_assignment -name VERILOG_FILE ../picosoc/simpleuart.v
-set_global_assignment -name VERILOG_FILE ../mods/basicblocks/sequential/shiftRegister.v
-set_global_assignment -name VERILOG_FILE ../mods/basicblocks/sequential/upCounter.v
-set_global_assignment -name VERILOG_FILE ../mods/basicblocks/memories/simple_dual_port_ram_single_clk.v
-set_global_assignment -name VERILOG_FILE ../mods/basicblocks/aip/aipModules.v
-set_global_assignment -name VERILOG_FILE ../picosoc/DE1SOC_picosoc.v
-set_global_assignment -name VERILOG_FILE ../picosoc/picosoc_AIP.v
-set_global_assignment -name VERILOG_FILE ../picosoc/picorv32m.v
-set_global_assignment -name VERILOG_FILE ../picosoc/native_aip.v
 set_location_assignment PIN_AF14 -to clk
 set_location_assignment PIN_AB12 -to ena
 set_location_assignment PIN_AA14 -to rst
@@ -151,4 +135,39 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledg_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ser_rx
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ser_tx
+set_global_assignment -name EDA_TEST_BENCH_NAME testbench_DE1SOC_picosoc -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_DE1SOC_picosoc
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_DE1SOC_picosoc -section_id testbench_DE1SOC_picosoc
+set_global_assignment -name EDA_TEST_BENCH_FILE ../picosoc/testbench_DE1SOC_picosoc.v -section_id testbench_DE1SOC_picosoc
+set_global_assignment -name SYSTEMVERILOG_FILE ../mods/1000500B/hdl/src/sync_rom.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../mods/1000500B/hdl/src/simple_dual_port_ram_single_clk_sv.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../mods/1000500B/hdl/src/realSubstactor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../mods/1000500B/hdl/src/ram_block.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../mods/1000500B/hdl/src/multiplicator.sv
+set_global_assignment -name VERILOG_FILE ../mods/1000500B/hdl/src/ID1000500B_conv.v
+set_global_assignment -name VERILOG_FILE ../mods/1000500B/hdl/src/ID1000500B_aip.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../mods/1000500B/hdl/src/convolutionator_fsm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../mods/1000500B/hdl/src/convolucionador_p2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../mods/1000500B/hdl/src/aync_rom.sv
+set_global_assignment -name VERILOG_FILE ../mods/00001001/hdl/src/ID00001001_dummyCtrl.v
+set_global_assignment -name VERILOG_FILE ../mods/00001001/hdl/src/ID00001001_dummyCore.v
+set_global_assignment -name VERILOG_FILE ../mods/00001001/hdl/src/ID00001001_dummy.v
+set_global_assignment -name VERILOG_FILE ../mods/00001001/hdl/src/ID00001001_aip.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/ipm/ipm.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/ipm/ipm_register.v
+set_global_assignment -name VERILOG_FILE ../picosoc/ID0000200F_aip.v
+set_global_assignment -name VERILOG_FILE ../picosoc/simpleuart.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/sequential/shiftRegister.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/sequential/upCounter.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/memories/simple_dual_port_ram_single_clk.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/aip/aipModules.v
+set_global_assignment -name VERILOG_FILE ../picosoc/DE1SOC_picosoc.v
+set_global_assignment -name VERILOG_FILE ../picosoc/picosoc_AIP.v
+set_global_assignment -name VERILOG_FILE ../picosoc/picorv32m.v
+set_global_assignment -name VERILOG_FILE ../picosoc/native_aip.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/sequential/register.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/arithmetic/comparatorLessThan.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/arithmetic/comparatorEqual.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/arithmetic/comparatorGreaterThan.v
+set_global_assignment -name VERILOG_FILE ../mods/basicblocks/arithmetic/realAdder.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

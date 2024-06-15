@@ -91,11 +91,11 @@ module picosoc_AIP (
 
 	wire mem_valid;
 	wire mem_instr;
-	wire mem_ready;
+	wire mem_ready, mem_readyMEM, mem_readIPCORE;
 	wire [31:0] mem_addr;
 	wire [31:0] mem_wdata;
 	wire [3:0] mem_wstrb;
-	wire [31:0] mem_rdata;
+	wire [31:0] mem_rdata, mem_rdata_mem, mem_rdata_ipcore;
 
 	reg rom_ready;
 	wire rom_mem_valid;
@@ -103,6 +103,38 @@ module picosoc_AIP (
 
 	reg ram_ready;
 	wire [31:0] ram_rdata;
+
+ 	// IP_Module0
+	localparam IP0_BASE_ADDR = 32'h80000100;
+	localparam IP0_RANGE     = IP0_BASE_ADDR + 32'h00000100;
+       
+ 	wire         	sel_aip0, mem_readyAIP0;
+   	wire [31:0]  	mem_rdata_AIP0;
+
+   	wire [31:0]     iPdataIn0, iPdataOut0;
+   	wire            iPwrite0, iPread0, iPstart0;
+   	wire [4:0]      iPconf0;
+   	wire [15:0]     iPINTstatus0;
+
+   	
+   	assign sel_aip0 = (((IP0_BASE_ADDR <= mem_addr) && (mem_addr <= (IP0_RANGE))))? 1'b1 : 1'b0;
+
+	// IP_Module1 (CONV)
+	localparam IP1_BASE_ADDR = 32'h80000300; // direccion del convolucionador
+	localparam IP1_RANGE     = IP1_BASE_ADDR + 32'h00000100; // top address
+       
+ 	wire         	sel_aip1, mem_readyAIP1;
+   	wire [31:0]  	mem_rdata_AIP1;
+
+   	wire [31:0]     iPdataIn1, iPdataOut1;
+   	wire            iPwrite1, iPread1, iPstart1;
+   	wire [4:0]      iPconf1;
+   	wire [15:0]     iPINTstatus1;
+
+   	
+   	assign sel_aip1 = (((IP1_BASE_ADDR <= mem_addr) && (mem_addr <= (IP1_RANGE))))? 1'b1 : 1'b0;
+
+	//*************************************************************************************************//
 
 	assign iomem_valid = mem_valid && (mem_addr[31:24] > 8'h 01);
 	assign rom_mem_valid = mem_valid && (mem_addr >= 4*MEM_WORDS && mem_addr < 32'h 0200_0000); 
@@ -118,10 +150,14 @@ module picosoc_AIP (
 	wire        simpleuart_reg_dat_wait;
 
 	assign mem_ready = (iomem_valid && iomem_ready) || rom_ready || ram_ready ||
-			simpleuart_reg_div_sel || (simpleuart_reg_dat_sel && !simpleuart_reg_dat_wait);
+			simpleuart_reg_div_sel || (simpleuart_reg_dat_sel && !simpleuart_reg_dat_wait) || (sel_aip0 && mem_readyAIP0) || (sel_aip1 && mem_readyAIP1);
 
 	assign mem_rdata = (iomem_valid && iomem_ready) ? iomem_rdata :rom_ready ? rom_mem_rdata : ram_ready ? ram_rdata : simpleuart_reg_div_sel ? simpleuart_reg_div_do :
-			simpleuart_reg_dat_sel ? simpleuart_reg_dat_do : 32'h 0000_0000;
+			simpleuart_reg_dat_sel ? simpleuart_reg_dat_do : sel_aip0? mem_rdata_AIP0 : sel_aip1? mem_rdata_AIP1 : 32'h 0000_0000;
+			
+
+	//*************************************************************************************************//
+			
 
     wire [(4*32)-1:0] rdDataConfigReg;
 
@@ -149,18 +185,6 @@ module picosoc_AIP (
 		.mem_rdata   (mem_rdata  ),
 		.irq         (irq        )
 	);
-/*
-picosoc_mem_rom #(
-                .WORDS(MEM_WORDS)
-        ) memoryROM (
-                .clk(clk),
-                //.wen((mem_valid && mem_addr >= 4*MEM_WORDS && mem_addr < 32'h 0200_0000) ? mem_wstrb : 4'b0),
-                .addr(mem_addr[$clog2(MEM_WORDS)-1 + 2 :2]),
-                //.wdata(mem_wdata),
-                .rdata(rom_mem_rdata)
-        );
-*/
-	//assign rom_debug = rom_mem_rdata[31:16];
 	
 	simpleuart simpleuart (
 		.clk         (clk         ),
@@ -225,6 +249,97 @@ picosoc_mem_rom #(
         .intIPCore_Done         (),
         .startIPcore            (startIPcore)
 );
+
+//************************************************************************************************************//
+// interfaces CPU - AIP
+
+	native_aip CPU_to_aip0(
+    		.i_clk			(clk),
+    		.i_rst			(resetn),
+
+		.i_cpu_mem_valid	(mem_valid),
+		.i_cpu_mem_addr		(mem_addr),
+		.i_cpu_mem_wdata	(mem_wdata),
+		.i_cpu_mem_wen		(mem_valid && !mem_readyAIP0 &&((sel_aip0)? |(mem_wstrb) : 1'b0)),
+
+		.o_cpu_mem_rdata	(mem_rdata_AIP0),
+		.o_cpu_mem_ready	(mem_readyAIP0),
+		.o_cpu_irq		(),
+
+    // aip interface
+    		.i_aip_sel		(sel_aip0),
+    		.i_aip_enable		(1'b1),
+    		.i_aip_dataOut		(iPdataOut0),
+    		.o_aip_dataIn		(iPdataIn0),
+    		.o_aip_config		(iPconf0),
+    		.o_aip_read		(iPread0),
+    		.o_aip_write		(iPwrite0),
+    		.o_aip_start		(iPstart0),
+    		.i_aip_int		(iPINTstatus0),
+    		.o_core_int		()
+	);
+
+  
+	ID00001001_dummy
+	DUMMY0
+	(
+	    .clk 	(clk),
+	    .rst_a 	(resetn),
+	    .en_s 	(1'b1),
+
+	    .data_in	(iPdataIn0),
+	    .data_out	(iPdataOut0),
+	    .write	(iPwrite0),
+	    .read	(iPread0),
+	    .start	(iPstart0),
+	    .conf_dbus	(iPconf0),
+	    .int_req	(iPINTstatus0)
+	);
+
+	// Instancia Convolucion
+	native_aip CPU_to_convolution_core(
+    		.i_clk			(clk),
+    		.i_rst			(resetn),
+
+		.i_cpu_mem_valid	(mem_valid),
+		.i_cpu_mem_addr		(mem_addr),
+		.i_cpu_mem_wdata	(mem_wdata),
+		.i_cpu_mem_wen		(mem_valid && !mem_readyAIP1 &&((sel_aip1)? |(mem_wstrb) : 1'b0)),
+
+		.o_cpu_mem_rdata	(mem_rdata_AIP1),
+		.o_cpu_mem_ready	(mem_readyAIP1),
+		.o_cpu_irq		(),
+
+    // aip interface
+    		.i_aip_sel			(sel_aip1),
+    		.i_aip_enable		(1'b1),
+    		.i_aip_dataOut		(iPdataOut1),
+    		.o_aip_dataIn		(iPdataIn1),
+    		.o_aip_config		(iPconf1),
+    		.o_aip_read			(iPread1),
+    		.o_aip_write		(iPwrite1),
+    		.o_aip_start		(iPstart1),
+    		.i_aip_int			(iPINTstatus1),
+    		.o_core_int			()
+	);
+
+	ID1000500B_conv
+	ip_conv_core
+	(
+		.clk		(clk),
+		.rst_a		(resetn),
+		.en_s		(1'b1),
+		.data_in	(iPdataIn1),      //different data in information types
+		.data_out	(iPdataOut1),     //different data out information types
+		.write		(iPwrite1),       //Used for protocol to write different information types
+		.read		(iPread1),        //Used for protocol to read different information types
+		.start		(iPstart1),       //Used to start the IP core
+		.conf_dbus	(iPconf1),      //Used for protocol to determine different actions types
+		.int_req	(iPINTstatus1)          //Interruption request
+	);
+
+//************************************************************************************************************//
+
 endmodule
 
 // Implementation note:

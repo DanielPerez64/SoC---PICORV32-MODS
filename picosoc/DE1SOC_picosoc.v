@@ -132,7 +132,7 @@ assign wireReset = rst & rstMCU;
 	assign ledr_n = !leds[6];
 	assign ledg_n = !leds[7];
 
-	//wire        iomem_valid;
+	wire        iomem_valid;
 	reg         iomem_ready;
 	wire [3:0]  iomem_wstrb;
 	wire [31:0] iomem_addr;

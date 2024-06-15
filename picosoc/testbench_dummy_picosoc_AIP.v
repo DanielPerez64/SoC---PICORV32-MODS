@@ -19,7 +19,7 @@
 
 `timescale 1 ns / 1 ps
 
-module testbench_picosoc_AIP;
+module testbench_dummy_picosoc_AIP;
             //----------------------------------------------------------
             //.......MANDATORY TB PARAMETERS............................
             //----------------------------------------------------------
@@ -55,7 +55,7 @@ localparam  CYCLE		  = 'd20, // Define the clock work cycle in ns (user)
 
 	initial begin
 		$dumpfile("testbench.vcd");
-		$dumpvars(0, testbench_picosoc_AIP);
+		$dumpvars(0, testbench_dummy_picosoc_AIP);
 		repeat (6) begin
 			repeat (50000) @(posedge clk);
 			$display("+50000 cycles");
@@ -99,7 +99,7 @@ localparam  CYCLE		  = 'd20, // Define the clock work cycle in ns (user)
 		#1 $display("%b", leds);
 	end
 
-	max10_picosoc 
+	ipdummy_picosoc 
 		// We limit the amount of memory in simulation
 		// in order to avoid reduce simulation time
 		// required for intialization of RAM

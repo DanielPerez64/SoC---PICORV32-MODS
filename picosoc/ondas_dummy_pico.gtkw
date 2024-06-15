@@ -1,0 +1,109 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Tue Jun 11 21:08:14 2024
+[*]
+[dumpfile] "/home/pablo/disen_soc/AIP_picorv32_InterfaceAIP_Dummy/picorv32_InterfaceAIP_quartus_l/picosoc/testbench.vcd"
+[dumpfile_mtime] "Tue Jun 11 17:01:09 2024"
+[dumpfile_size] 94101634
+[savefile] "/home/pablo/disen_soc/AIP_picorv32_InterfaceAIP_Dummy/picorv32_InterfaceAIP_quartus_l/picosoc/ondas_dummy_pico.gtkw"
+[timestart] 1287112300
+[size] 1920 950
+[pos] -1 -123
+*-16.799999 1287430100 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench_dummy_picosoc_AIP.
+[treeopen] testbench_dummy_picosoc_AIP.uut.
+[treeopen] testbench_dummy_picosoc_AIP.uut.soc.
+[sst_width] 297
+[signals_width] 287
+[sst_expanded] 1
+[sst_vpaned_height] 422
+@28
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.clk
+@820
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_ascii_instr[63:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_ascii_state[127:0]
+@22
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_addr[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_imm[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_opcode[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_rd[4:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_rs1[4:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_rs2[4:0]
+@23
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_addr[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_instr
+@22
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_rdata[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_ready
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_valid
+@22
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_wdata[31:0]
+@820
+[color] 3
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_wdata[31:0]
+@22
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_wstrb[3:0]
+@200
+-
+-
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.busCtrl_askRead
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.busCtrl_askWrite
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.busCtrl_doRead
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.busCtrl_doWrite
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.i_aip_dataOut[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.i_aip_enable
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.i_aip_int
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.i_aip_sel
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.i_cpu_mem_addr[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.i_cpu_mem_valid
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.i_cpu_mem_wdata[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.i_cpu_mem_wen
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.i_rst
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.o_aip_config[4:0]
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.o_aip_dataIn[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.o_aip_read
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.o_aip_start
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.o_aip_write
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.o_cpu_mem_rdata[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.o_cpu_mem_ready
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.reg0[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.reg4[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.reg8[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_aip0.reg12[31:0]
+@200
+-
+-
+@22
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.conf_dbus[4:0]
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.data_ConfigReg[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.data_MemIn0[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.data_MemOut0[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.data_in[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.data_out[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.en_s
+@22
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.int_IPcore[7:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.int_req
+@22
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.rd_addr_MemIn0[15:0]
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.wr_addr_MemOut0[15:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.DUMMY0.wr_en_MemOut0
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,384 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do picorv32_quartus_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying /home/luis/intelFPGA_lite/22.1std/questa_fse/linux_x86_64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:10:23 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm.v 
+# -- Compiling module ipm
+# 
+# Top level modules:
+# 	ipm
+# End time: 10:10:23 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm_register.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:10:23 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm_register.v 
+# -- Compiling module ipm_register
+# 
+# Top level modules:
+# 	ipm_register
+# End time: 10:10:23 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/ID0000200F_aip.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:10:23 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/ID0000200F_aip.v 
+# -- Compiling module ID0000200F_aip
+# -- Compiling module ID0000200F_aipModules
+# -- Compiling module ID0000200F_aipCtrl
+# 
+# Top level modules:
+# 	ID0000200F_aip
+# End time: 10:10:23 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/simpleuart.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:10:23 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/simpleuart.v 
+# -- Compiling module simpleuart
+# 
+# Top level modules:
+# 	simpleuart
+# End time: 10:10:23 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories/simple_dual_port_ram_single_clk.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:10:23 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories/simple_dual_port_ram_single_clk.v 
+# -- Compiling module simple_dual_port_ram_single_clk
+# 
+# Top level modules:
+# 	simple_dual_port_ram_single_clk
+# End time: 10:10:23 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip/aipModules.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:10:23 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip/aipModules.v 
+# -- Compiling module aipStatus
+# -- Compiling module aipParametricMux
+# -- Compiling module aipId
+# -- Compiling module aipConfigurationRegister
+# 
+# Top level modules:
+# 	aipStatus
+# 	aipParametricMux
+# 	aipId
+# 	aipConfigurationRegister
+# End time: 10:10:24 on Jun 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/DE1SOC_picosoc.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:10:24 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/DE1SOC_picosoc.v 
+# -- Compiling module DE1SOC_picosoc
+# ** Error: /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/DE1SOC_picosoc.v(150): (vlog-2730) Undefined variable: 'iomem_valid'.
+# End time: 10:10:24 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/luis/intelFPGA_lite/22.1std/questa_fse/linux_x86_64/vlog failed.
+# Error in macro ./picorv32_quartus_run_msim_rtl_verilog.do line 14
+# /home/luis/intelFPGA_lite/22.1std/questa_fse/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/p..."
+do picorv32_quartus_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:35 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm.v 
+# -- Compiling module ipm
+# 
+# Top level modules:
+# 	ipm
+# End time: 10:11:35 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm_register.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:35 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm_register.v 
+# -- Compiling module ipm_register
+# 
+# Top level modules:
+# 	ipm_register
+# End time: 10:11:35 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/ID0000200F_aip.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:35 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/ID0000200F_aip.v 
+# -- Compiling module ID0000200F_aip
+# -- Compiling module ID0000200F_aipModules
+# -- Compiling module ID0000200F_aipCtrl
+# 
+# Top level modules:
+# 	ID0000200F_aip
+# End time: 10:11:36 on Jun 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/simpleuart.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:36 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/simpleuart.v 
+# -- Compiling module simpleuart
+# 
+# Top level modules:
+# 	simpleuart
+# End time: 10:11:36 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories/simple_dual_port_ram_single_clk.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:36 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories/simple_dual_port_ram_single_clk.v 
+# -- Compiling module simple_dual_port_ram_single_clk
+# 
+# Top level modules:
+# 	simple_dual_port_ram_single_clk
+# End time: 10:11:36 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip/aipModules.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:36 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip/aipModules.v 
+# -- Compiling module aipStatus
+# -- Compiling module aipParametricMux
+# -- Compiling module aipId
+# -- Compiling module aipConfigurationRegister
+# 
+# Top level modules:
+# 	aipStatus
+# 	aipParametricMux
+# 	aipId
+# 	aipConfigurationRegister
+# End time: 10:11:36 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/DE1SOC_picosoc.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:36 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/DE1SOC_picosoc.v 
+# -- Compiling module DE1SOC_picosoc
+# 
+# Top level modules:
+# 	DE1SOC_picosoc
+# End time: 10:11:36 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/picosoc_AIP.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:36 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/picosoc_AIP.v 
+# -- Compiling module picosoc_AIP
+# -- Compiling module picosoc_regs
+# -- Compiling module picosoc_mem
+# -- Compiling module picosoc_mem_rom
+# 
+# Top level modules:
+# 	picosoc_AIP
+# 	picosoc_regs
+# 	picosoc_mem_rom
+# End time: 10:11:36 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/picorv32m.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:36 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/picorv32m.v 
+# -- Compiling module picorv32
+# -- Compiling module picorv32_regs
+# -- Compiling module picorv32_pcpi_mul
+# -- Compiling module picorv32_pcpi_fast_mul
+# -- Compiling module picorv32_pcpi_div
+# -- Compiling module picorv32_axi
+# -- Compiling module picorv32_axi_adapter
+# -- Compiling module picorv32_wb
+# 
+# Top level modules:
+# 	picorv32_regs
+# 	picorv32_axi
+# 	picorv32_wb
+# End time: 10:11:36 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:11:36 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v 
+# -- Compiling module testbench_DE1SOC_picosoc
+# ** Error: (vlog-13027) /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v(59): near "x": Syntax error. 'for' loop variable declaration only allowed in SystemVerilog.
+# ** Error: /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v(59): (vlog-2730) Undefined variable: 'x'.
+# ** Error: (vlog-13036) /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v(59): near "++": Operator only allowed in SystemVerilog.
+# ** Error: (vlog-13069) /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v(59): near ")": syntax error, unexpected ')', expecting ';'.
+# ** Error: /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v(64): (vlog-13161) unexpected '$display'
+# ** Error: (vlog-13069) /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v(65): near "end": syntax error, unexpected end.
+# ** Error: /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v(192): (vlog-2730) Undefined variable: 'i'.
+# End time: 10:11:36 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+# ** Error: /home/luis/intelFPGA_lite/22.1std/questa_fse/linux_x86_64/vlog failed.
+# Error in macro ./picorv32_quartus_run_msim_rtl_verilog.do line 18
+# /home/luis/intelFPGA_lite/22.1std/questa_fse/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc {/home/luis/Documents/picorv32_Interfa..."
+do picorv32_quartus_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:03 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm.v 
+# -- Compiling module ipm
+# 
+# Top level modules:
+# 	ipm
+# End time: 10:14:03 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm_register.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:03 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/ipm/ipm_register.v 
+# -- Compiling module ipm_register
+# 
+# Top level modules:
+# 	ipm_register
+# End time: 10:14:03 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/ID0000200F_aip.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:03 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/ID0000200F_aip.v 
+# -- Compiling module ID0000200F_aip
+# -- Compiling module ID0000200F_aipModules
+# -- Compiling module ID0000200F_aipCtrl
+# 
+# Top level modules:
+# 	ID0000200F_aip
+# End time: 10:14:04 on Jun 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/simpleuart.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:04 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/simpleuart.v 
+# -- Compiling module simpleuart
+# 
+# Top level modules:
+# 	simpleuart
+# End time: 10:14:04 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories/simple_dual_port_ram_single_clk.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:04 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/memories/simple_dual_port_ram_single_clk.v 
+# -- Compiling module simple_dual_port_ram_single_clk
+# 
+# Top level modules:
+# 	simple_dual_port_ram_single_clk
+# End time: 10:14:04 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip {/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip/aipModules.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:04 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip" /home/luis/Documents/picorv32_InterfaceAIP_quartus/mods/basicblocks/aip/aipModules.v 
+# -- Compiling module aipStatus
+# -- Compiling module aipParametricMux
+# -- Compiling module aipId
+# -- Compiling module aipConfigurationRegister
+# 
+# Top level modules:
+# 	aipStatus
+# 	aipParametricMux
+# 	aipId
+# 	aipConfigurationRegister
+# End time: 10:14:04 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/DE1SOC_picosoc.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:04 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/DE1SOC_picosoc.v 
+# -- Compiling module DE1SOC_picosoc
+# 
+# Top level modules:
+# 	DE1SOC_picosoc
+# End time: 10:14:04 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/picosoc_AIP.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:04 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/picosoc_AIP.v 
+# -- Compiling module picosoc_AIP
+# -- Compiling module picosoc_regs
+# -- Compiling module picosoc_mem
+# -- Compiling module picosoc_mem_rom
+# 
+# Top level modules:
+# 	picosoc_AIP
+# 	picosoc_regs
+# 	picosoc_mem_rom
+# End time: 10:14:04 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/picorv32m.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:04 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc/picorv32m.v 
+# -- Compiling module picorv32
+# -- Compiling module picorv32_regs
+# -- Compiling module picorv32_pcpi_mul
+# -- Compiling module picorv32_pcpi_fast_mul
+# -- Compiling module picorv32_pcpi_div
+# -- Compiling module picorv32_axi
+# -- Compiling module picorv32_axi_adapter
+# -- Compiling module picorv32_wb
+# 
+# Top level modules:
+# 	picorv32_regs
+# 	picorv32_axi
+# 	picorv32_wb
+# End time: 10:14:04 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc {/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 10:14:04 on Jun 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc" /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v 
+# -- Compiling module testbench_DE1SOC_picosoc
+# ** Error: (vlog-13036) /home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc/testbench_DE1SOC_picosoc.v(59): near "++": Operator only allowed in SystemVerilog.
+# End time: 10:14:04 on Jun 06,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/luis/intelFPGA_lite/22.1std/questa_fse/linux_x86_64/vlog failed.
+# Error in macro ./picorv32_quartus_run_msim_rtl_verilog.do line 18
+# /home/luis/intelFPGA_lite/22.1std/questa_fse/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+/home/luis/Documents/picorv32_InterfaceAIP_quartus/picosoc_AIP/../picosoc {/home/luis/Documents/picorv32_Interfa..."

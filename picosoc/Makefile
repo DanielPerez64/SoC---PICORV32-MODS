@@ -5,10 +5,11 @@ ICARUS_SUFFIX =
 IVERILOG = iverilog$(ICARUS_SUFFIX)
 VVP = vvp$(ICARUS_SUFFIX)
 COMPRESSED_ISA = C
-PYTHON = python3
+PYTHON = python3.11
 
 NAME = PICORV32_Module
-DDS_SRC = ../mods/DDS/hdl/src/
+IPDUMMY_SRC = ../mods/00001001/hdl/src/
+IPCONV_SRC = ../mods/1000500B/hdl/src/
 BASICBLOCKS = ../mods/basicblocks/
 MODULES= modules
 
@@ -22,10 +23,12 @@ icebsim_max: max10_tb.vvp altera_out.txt
 	
 test_aip_vcd: picoSoC_DDS_tb.vvp firmware/firmware.hex
 	$(VVP) -N $< +vcd +trace +noerror
+
+synth: $(BASICBLOCKS)memories/*.v $(BASICBLOCKS)arithmetic/*.v $(BASICBLOCKS)sequential/*.v $(IPDUMMY_SRC)*.v $(IPCONV_SRC)*.v $(BASICBLOCKS)aip/aipModules.v $(IPCONV_SRC)*.sv  testbench_dummy_picosoc_AIP.v native_aip.v ipdummy_picosoc.v picosoc_AIP.v ID0000200F_aip.v simpleuart.v picorv32.v
 	
-synth: $(BASICBLOCKS)memories/simple_dual_port_ram_single_clk.v $(BASICBLOCKS)aip/aipModules.v $(BASICBLOCKS)sequential/upCounter.v $(BASICBLOCKS)sequential/shiftRegister.v testbench_picosoc_AIP.v max10_picosoc.v picosoc_AIP.v ID0000200F_aip.v simpleuart.v picorv32.v
+#synth: $(BASICBLOCKS)*.v $(BASICBLOCKS)memories/simple_dual_port_ram_single_clk.v $(BASICBLOCKS)aip/aipModules.v $(BASICBLOCKS)sequential/upCounter.v $(BASICBLOCKS)sequential/shiftRegister.v $(IPDUMMY_SRC)*.v $(IPCONV_SRC)*.v 	$(IPCONV_SRC)*.sv  testbench_dummy_picosoc_AIP.v native_aip.v ipdummy_picosoc.v picosoc_AIP.v ID0000200F_aip.v simpleuart.v picorv32.v
 	#-- Compilar
-	$(IVERILOG) $^ -o $(NAME)_tb.out
+	$(IVERILOG) -g2005-sv $^ -o $(NAME)_tb.out
 	
 synth3:testbench_ez.v picorv32.v
 	$(IVERILOG) -o $@ $(subst C,-DCOMPRESSED_ISA,$(COMPRESSED_ISA)) $^

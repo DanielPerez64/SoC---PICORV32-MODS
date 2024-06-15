@@ -1,0 +1,105 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Thu Jun 13 05:50:17 2024
+[*]
+[dumpfile] "/home/pablo/disen_soc/AIP Quartus Pico/picorv32_InterfaceAIP_quartus_convolucionador/picosoc/testbench.vcd"
+[dumpfile_mtime] "Thu Jun 13 05:04:50 2024"
+[dumpfile_size] 142480769
+[savefile] "/home/pablo/disen_soc/AIP Quartus Pico/picorv32_InterfaceAIP_quartus_convolucionador/picosoc/ondas_conv_cpu.gtkw"
+[timestart] 2019930000
+[size] 1920 950
+[pos] -1361 -1
+*-21.950676 2039580000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench_dummy_picosoc_AIP.
+[treeopen] testbench_dummy_picosoc_AIP.uut.
+[treeopen] testbench_dummy_picosoc_AIP.uut.soc.
+[treeopen] testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.
+[treeopen] testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.CORE.
+[treeopen] testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.INTERFACE.AIP.
+[sst_width] 297
+[signals_width] 368
+[sst_expanded] 1
+[sst_vpaned_height] 388
+@200
+-CPU
+@820
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_ascii_instr[63:0]
+@821
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_ascii_state[127:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_instr
+@22
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_opcode[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_rd[4:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_rs1[4:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_insn_rs2[4:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_addr[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_ready
+>141100000
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_valid
+@22
+>0
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_rdata[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_wdata[31:0]
+@820
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_wdata[31:0]
+@22
+testbench_dummy_picosoc_AIP.uut.soc.cpu.dbg_mem_wstrb[3:0]
+@200
+-
+-interfaz cpu - core convolucion
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.i_aip_dataOut[31:0]
+@24
+[color] 6
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.i_aip_dataOut[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.busCtrl_askRead
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.busCtrl_doRead
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.busCtrl_askWrite
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.busCtrl_doWrite
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.o_aip_config[4:0]
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.o_aip_dataIn[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.o_aip_write
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.o_cpu_mem_rdata[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.o_cpu_mem_ready
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.reg0[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.reg4[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.reg8[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.reg12[31:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.i_aip_sel
+@22
+testbench_dummy_picosoc_AIP.uut.soc.CPU_to_convolution_core.o_aip_config[4:0]
+@200
+-
+-
+-IP_CONV
+@22
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.data_in[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.INTERFACE.AIP.CONFREG.dataInput[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.INTERFACE.dataOutAIP[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.INTERFACE.dataInAIP[31:0]
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.INTERFACE.configAIP[4:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.CORE.start_i
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.CORE.busy_o
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.CORE.done_o
+@22
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.CORE.temp_h[7:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.CORE.temp_h_load
+@22
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.CORE.temp_y[7:0]
+@28
+testbench_dummy_picosoc_AIP.uut.soc.ip_conv_core.CORE.temp_y_load
+@200
+-cpu
+[pattern_trace] 1
+[pattern_trace] 0
